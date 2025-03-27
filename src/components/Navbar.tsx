@@ -6,20 +6,20 @@ import Image from "next/image";
 // import { TitleBar } from "./TitleBar";
 import {
   IconHelpHexagonFilled,
-  IconArticleFilled,
+  IconBoltFilled,
   IconBrandGithubFilled,
 } from "@tabler/icons-react";
 
 const items = [
   {
+    title: "How it works",
+    url: "#how",
+    icon: IconBoltFilled,
+  },
+  {
     title: "Why",
     url: "#why",
     icon: IconHelpHexagonFilled,
-  },
-  {
-    title: "How",
-    url: "#how",
-    icon: IconArticleFilled,
   },
   {
     title: "GitHub",
@@ -38,7 +38,7 @@ export const NavBar: React.FC = () => {
             key={item.title}
             href={item.url}
             target={item.url.startsWith("http") ? "_blank" : ""}
-            className="flex gap-2 hover:bg-zinc-900 transition-all duration-300 p-3 h-[50px] rounded-lg items-center justify-end aspect-square"
+            className="flex gap-2 hover:bg-zinc-900 transition-all duration-300 p-3 h-[50px] rounded-lg items-center justify-end"
           >
             <item.icon size={20} />
             {item.title}

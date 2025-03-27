@@ -5,8 +5,8 @@ import Image from "next/image";
 export const Hero: React.FC = () => {
   return (
     <div>
-      <div className="h-150 w-full flex place-self-center items-center">
-        <h1 className="lg:text-5xl font-bold w-200 ml-[13%] md:text-2xl text-xl drop-shadow-lg ">
+      <div className="mt-30 mb-30 h-100 w-full flex place-self-center items-center justify-center">
+        <h1 className="lg:text-5xl font-bold w-200 ml-[5%] md:text-2xl text-xl drop-shadow-lg ">
           Ditch TeamViewer & AnyDesk — RemoteCord is the <i>new way</i> to
           remote desktop.
         </h1>

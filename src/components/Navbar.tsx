@@ -12,15 +12,15 @@ import {
 
 const items = [
   {
-    title: "How it works",
-    url: "#how",
-    icon: IconBoltFilled,
-  },
-  {
-    title: "Why",
-    url: "#why",
+    title: "FAQ",
+    url: "#faq",
     icon: IconHelpHexagonFilled,
   },
+  // {
+  //   title: "Get Started",
+  //   url: "#get-started",
+  //   icon: IconBoltFilled,
+  // },
   {
     title: "GitHub",
     url: "https://github.com/RemoteCord",

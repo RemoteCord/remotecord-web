@@ -13,7 +13,10 @@ export const Section: React.FC<{
 }> = ({ title, description, id, image, width = 1100, height = 1100 }) => {
   return (
     <div>
-      <div id={id} className="place-self-center w-fit text-center mt-20">
+      <div
+        id={id}
+        className="place-self-center md:lg:w-fit w-[80%] text-center mt-20"
+      >
         <h2 className="text-5xl font-bold mb-2 drop-shadow-lg">{title}</h2>
         <p className="mb-4 text-gray-400">{description}</p>
         <Image

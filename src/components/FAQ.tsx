@@ -1,23 +1,28 @@
 const items = [
   {
-    title: "How does it work?",
-    answer:
-      "RemoteCord is a Discord bot that allows you to access your devices and transfer files from anywhere in the world. It uses a secure connection to ensure that your data is safe and private.",
-  },
-  {
     title: "What is RemoteCord?",
     answer:
       "RemoteCord is a remote access solution that integrates with Discord, allowing you to control your devices and transfer files seamlessly.",
   },
   {
-    title: "Is RemoteCord secure?",
+    title: "How does RemoteCord work?",
     answer:
-      "Yes, RemoteCord uses end-to-end encryption to ensure that your data is secure and private.",
+      "RemoteCord is a Discord bot that allows you to access your devices and transfer files from anywhere in the world. It uses a secure connection to ensure that your data is safe and private.",
   },
   {
     title: "How do I install RemoteCord?",
+    answer: `To install RemoteCord, follow these steps:\n\n
+        1. Join our Discord server: This allows the bot to send you direct messages.\n
+        2. Activate your Discord account: Locate the RemoteCord bot and send it the \`/activate\` command via direct message.\n
+        3. Download and install the RemoteCord Client App: Log in to the app using your Google Account.\n
+        4. Find your Client ID: In the app, locate your unique Client ID. Use the command \`/add <client_id>\` in Discord to friend your client. (Ensure you accept the friend request on the client.)\n
+        5. Connect to your client: Run the command \`/connect\` in Discord and select the client you just added.\n
+        6. You're all set!: You can now use RemoteCord to access your devices and transfer files seamlessly.`,
+  },
+  {
+    title: "Is RemoteCord secure?",
     answer:
-      "You can install RemoteCord by inviting the bot to your server and following the setup instructions provided in the documentation.",
+      "Yes, RemoteCord uses end-to-end encryption to ensure that your data is secure and private.",
   },
   {
     title: "What platforms does RemoteCord support?",
@@ -28,7 +33,10 @@ const items = [
 
 export const FAQ: React.FC = () => {
   return (
-    <div className="relative w-full bg-[#1213148a] px-6 pt-10 pb-8 mt-8 shadow-xl ring-1 ring-gray-900/5 sm:mx-auto sm:max-w-2xl sm:rounded-lg sm:px-10">
+    <div
+      id="faq"
+      className="relative w-full bg-[#1213148a] px-6 pt-10 pb-8 mt-8 shadow-xl ring-1 ring-gray-900/5 sm:mx-auto sm:max-w-2xl rounded-xl sm:px-10"
+    >
       <div className="mx-auto px-5">
         <div className="flex flex-col items-center">
           <h2 className="mt-5 text-center text-3xl font-bold tracking-tight md:text-5xl">
@@ -39,7 +47,34 @@ export const FAQ: React.FC = () => {
           </p>
         </div>
         <div className="mx-auto mt-8 grid max-w-xl divide-y divide-neutral-200">
-          <div className="py-5">
+          {items.map((item, index) => (
+            <div key={index} className="py-5">
+              <details className="group">
+                <summary className="flex cursor-pointer list-none items-center justify-between font-medium">
+                  <span>{item.title}</span>
+                  <span className="transition group-open:rotate-180">
+                    <svg
+                      fill="none"
+                      height="24"
+                      shapeRendering="geometricPrecision"
+                      stroke="currentColor"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      stroke-width="1.5"
+                      viewBox="0 0 24 24"
+                      width="24"
+                    >
+                      <path d="M6 9l6 6 6-6"></path>
+                    </svg>
+                  </span>
+                </summary>
+                <p className="group-open:animate-fadeIn mt-3 text-neutral-400 whitespace-pre-line">
+                  {item.answer}
+                </p>
+              </details>
+            </div>
+          ))}
+          {/* <div className="py-5">
             <details className="group">
               <summary className="flex cursor-pointer list-none items-center justify-between font-medium">
                 <span> How does the billing work?</span>
@@ -49,7 +84,7 @@ export const FAQ: React.FC = () => {
                     height="24"
                     shapeRendering="geometricPrecision"
                     stroke="currentColor"
-                    stroke-linecap="round"
+                    strokeLinecap="round"
                     stroke-linejoin="round"
                     stroke-width="1.5"
                     viewBox="0 0 24 24"
@@ -66,7 +101,7 @@ export const FAQ: React.FC = () => {
                 a credit card or other secure online payment method.
               </p>
             </details>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

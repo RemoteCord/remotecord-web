@@ -12,10 +12,10 @@ export default function Home() {
     <main>
       <Hero />
 
-      <hr className="my-12 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral-500 to-transparent opacity-25 dark:via-neutral-400" />
+      <hr className="my-30 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral-500 to-transparent opacity-25 dark:via-neutral-400" />
       <Section
         title="We fixed remote access"
-        description="Seamless integration with your existing tools and workflows. No more FTP, no more RDP, no more SSH."
+        description="Seamless integration with your existing tools and workflows. No more command lines or complicated setups."
         image="/screenshots/app.webp"
       ></Section>
       {/* <Section
@@ -36,12 +36,6 @@ export default function Home() {
         ]}
       />
       <hr className="my-12 mt-20 mb-20 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral-500 to-transparent opacity-25 dark:via-neutral-400" />
-
-      <Card
-        title="How does it work?"
-        body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-        icon="help"
-      />
 
       <FAQ />
     </main>

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 import { NavBar } from "@/components/Navbar";
+import { Footer } from "@/components/Footer";
 
 // Import Inter font
 import { Inter } from "next/font/google";
@@ -22,6 +23,7 @@ export default function RootLayout({
       <body className={`${font.className} antialiased dark`}>
         <NavBar />
         {children}
+        <Footer />
       </body>
     </html>
   );

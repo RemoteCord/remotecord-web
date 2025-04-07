@@ -6,6 +6,7 @@ import { FAQ } from "@/components/FAQ";
 import Image from "next/image";
 import { Section } from "@/components/Section";
 import { Import } from "lucide-react";
+import { Stats } from "@/components/Stats";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <Hero />
 
       <hr className="my-30 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral-500 to-transparent opacity-25 dark:via-neutral-400" />
+      <Stats />
       <Section
         title="We fixed remote access"
         description="Seamless integration with your existing tools and workflows. No more command lines or complicated setups."
@@ -27,10 +29,10 @@ export default function Home() {
       ></Section> */}
       <CarouselComp
         title="Secure, convenient & fast"
-        description="Access your devices and transfer files from anywhere in the world, conveniently inside Discord."
+        description="Wave goodbye to exposing your home network to the internet. Access your devices and transfer files from anywhere in the world, conveniently inside Discord."
         images={[
           "/screenshots/bot-1.png",
-          "/screenshots/bot-2.webp",
+          "/screenshots/bot-2.png",
           "/screenshots/bot-3.png",
           "/screenshots/bot-4.webp",
         ]}

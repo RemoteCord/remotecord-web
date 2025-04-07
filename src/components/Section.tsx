@@ -17,8 +17,8 @@ export const Section: React.FC<{
         id={id}
         className="place-self-center md:lg:w-fit w-[80%] text-center mt-20"
       >
-        <h2 className="text-5xl font-bold mb-2 drop-shadow-lg">{title}</h2>
-        <p className="mb-4 text-gray-400">{description}</p>
+        <h2 className="text-5xl font-bold mb-6 drop-shadow-lg">{title}</h2>
+        <p className="mb-7 text-gray-400">{description}</p>
         <Image
           src={image}
           alt="App screenshot"

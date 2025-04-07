@@ -35,7 +35,7 @@ export const FAQ: React.FC = () => {
   return (
     <div
       id="faq"
-      className="relative w-full bg-[#1213148a] px-6 pt-10 pb-8 mt-8 shadow-xl ring-1 ring-gray-900/5 sm:mx-auto sm:max-w-2xl rounded-xl sm:px-10"
+      className="relative w-full px-6 pt-10 pb-8 mt-8 ring-1 ring-gray-900/5 sm:mx-auto sm:rounded-xl sm:px-10"
     >
       <div className="mx-auto px-5">
         <div className="flex flex-col items-center">
@@ -43,10 +43,10 @@ export const FAQ: React.FC = () => {
             FAQ
           </h2>
           <p className="mt-3 text-lg text-amber-50 md:text-xl">
-            Frequenty asked questions
+            Questions you may have about our service.
           </p>
         </div>
-        <div className="mx-auto mt-8 grid max-w-xl divide-y divide-neutral-200">
+        <div className="mx-auto mt-8 grid max-w-[50%] divide-y divide-neutral-700">
           {items.map((item, index) => (
             <div key={index} className="py-5">
               <details className="group">
@@ -60,7 +60,7 @@ export const FAQ: React.FC = () => {
                       stroke="currentColor"
                       strokeLinecap="round"
                       strokeLinejoin="round"
-                      stroke-width="1.5"
+                      strokeWidth="1.5"
                       viewBox="0 0 24 24"
                       width="24"
                     >

@@ -28,7 +28,7 @@ const items = [
     icon: IconBrandGithubFilled,
   },
   {
-    title: "Support Server",
+    title: "Support",
     url: "https://discord.com",
     icon: IconBrandDiscordFilled,
   },

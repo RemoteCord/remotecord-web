@@ -27,8 +27,12 @@ export const CarouselComp: React.FC<{
       id={id}
       className="place-self-center text-center mt-20 md:lg:w-[40%] h-[30%] w-[80%]"
     >
-      <h2 className="text-5xl font-bold mb-2 drop-shadow-lg">{title}</h2>
-      <p className="mb-4 text-gray-400">{description}</p>
+      <h2 className="text-4xl md:text-5xl font-bold mb-2 drop-shadow-lg">
+        {title}
+      </h2>
+      <p className="mx-auto mb-4 text-gray-400 text-lg md:w-[80%] w-fit">
+        {description}
+      </p>
       <CarouselContent>
         {images.map((image, index) => (
           <CarouselItem

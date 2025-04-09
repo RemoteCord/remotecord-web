@@ -7,29 +7,32 @@ import Image from "next/image";
 import { Section } from "@/components/Section";
 import { Import } from "lucide-react";
 import { Stats } from "@/components/Stats";
+import { GridBackground } from "@/components/GridBg";
 
 export default function Home() {
   return (
     <main>
-      <Hero />
+      <GridBackground>
+        <Hero />
+      </GridBackground>
 
       <hr className="my-30 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral-500 to-transparent opacity-25 dark:via-neutral-400" />
       <Stats />
       <Section
         title="We fixed remote access"
-        description="Seamless integration with your existing tools and workflows. No more command lines or complicated setups."
+        description="Accessing your devices & transfering files has never been simpler. Securely and conveniently, from anywhere in the world."
         image="/screenshots/app.webp"
       ></Section>
-      {/* <Section
-        title="Secure, convenient & fast"
-        description="Access your devices and transfer files from anywhere in the world, conveniently inside Discord."
-        image="/screenshots/bot-2.png"
-        height={800}
-        width={800}
-      ></Section> */}
+
+      <Section
+        title="Built from the ground up with your security in mind"
+        description="Never expose your home network to the internet again. Enjoy a blazingly fast & secure experience."
+        image="/screenshots/app.webp"
+      ></Section>
+
       <CarouselComp
-        title="Secure, convenient & fast"
-        description="Wave goodbye to exposing your home network to the internet. Access your devices and transfer files from anywhere in the world, conveniently inside Discord."
+        title="A feature-set that needs no compromises"
+        description="When using RemoteCord, you don't compromise on anything. Run commands, transfer files, take screenshots & more, all inside Discord."
         images={[
           "/screenshots/bot-1.png",
           "/screenshots/bot-2.png",

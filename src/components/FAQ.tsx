@@ -6,8 +6,13 @@ const items = [
   },
   {
     title: "How does RemoteCord work?",
+    answer: `RemoteCord is essentially a Discord bot that is able to securely access a device and relay information from it back to Discord. It uses a client app that runs on the device you want to access, which communicates with the bot to provide remote access.\n
+      The devices you add are called "clients".`,
+  },
+  {
+    title: "Can my client be used by more than one user?",
     answer:
-      "RemoteCord is a Discord bot that allows you to access your devices and transfer files from anywhere in the world. It uses a secure connection to ensure that your data is safe and private.",
+      "Yes. Using our friend system, you can add multiple users and allow them different levels of access to your client (eg. User1 has full control, User2 can only download files). You can also remove users & their permissions at any time.",
   },
   {
     title: "How do I install RemoteCord?",
@@ -21,8 +26,9 @@ const items = [
   },
   {
     title: "Is RemoteCord secure?",
-    answer:
-      "Yes, RemoteCord uses end-to-end encryption to ensure that your data is secure and private.",
+    answer: `Yes, RemoteCord uses industry standard state-of-the-art security practices to ensure that your files and information are secure and private.\n
+      Additionally, the client app can be used to grant or revoke permission to any user the client is friends with.\n
+      RemoteCord does not store any of your files or information, and all data is encrypted during transmission.`,
   },
   {
     title: "What platforms does RemoteCord support?",

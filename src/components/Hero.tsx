@@ -5,8 +5,8 @@ import Image from "next/image";
 export const Hero: React.FC = () => {
   return (
     <div className="mt-40 mb-30">
-      <div className="mt-10 mb-10 h-100 w-full flex place-self-center items-center justify-center">
-        <h1 className="lg:text-7xl font-bold w-200 ml-[5%] md:text-2xl text-xl drop-shadow-lg ">
+      <div className="mt-10 mb-10 h-100 w-full flex flex-col place-self-center items-center justify-center md:flex-row">
+        <h1 className="lg:text-7xl font-bold w-full ml-[5%] drop-shadow-lg md:text-5xl text-4xl md:w-200 text-center md:text-left">
           Ditch TeamViewer & AnyDesk — Welcome to the <i>new way</i> to remote
           desktop.
         </h1>

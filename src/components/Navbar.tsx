@@ -8,6 +8,7 @@ import {
   IconHelpHexagonFilled,
   IconBoltFilled,
   IconBrandGithubFilled,
+  IconBrandDiscordFilled,
 } from "@tabler/icons-react";
 
 const items = [
@@ -25,6 +26,11 @@ const items = [
     title: "GitHub",
     url: "https://github.com/RemoteCord",
     icon: IconBrandGithubFilled,
+  },
+  {
+    title: "Support Server",
+    url: "https://discord.com",
+    icon: IconBrandDiscordFilled,
   },
 ];
 

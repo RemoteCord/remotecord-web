@@ -30,7 +30,7 @@ export const Hero: React.FC = () => {
           type="button"
           className="py-5 px-8 text-base bg-indigo-50 text-indigo-500 rounded-full cursor-pointer font-semibold text-center shadow-xs transition-all duration-500 hover:bg-indigo-100"
         >
-          Documentation
+          Support
         </button>
       </div>
     </div>

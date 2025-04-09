@@ -46,7 +46,7 @@ export const FAQ: React.FC = () => {
             Questions you may have about our service.
           </p>
         </div>
-        <div className="mx-auto mt-8 grid max-w-[50%] divide-y divide-neutral-700">
+        <div className="mx-auto mt-8 grid divide-y divide-neutral-700 md:max-w-[50%]">
           {items.map((item, index) => (
             <div key={index} className="py-5">
               <details className="group">

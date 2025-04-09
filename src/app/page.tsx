@@ -34,7 +34,7 @@ export default function Home() {
           "/screenshots/bot-1.png",
           "/screenshots/bot-2.png",
           "/screenshots/bot-3.png",
-          "/screenshots/bot-4.webp",
+          "/screenshots/bot-4.png",
         ]}
       />
       <hr className="my-12 mt-20 mb-20 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral-500 to-transparent opacity-25 dark:via-neutral-400" />

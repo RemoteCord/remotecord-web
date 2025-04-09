@@ -18,13 +18,13 @@ export const Stats: React.FC = () => {
         <h2 className="text-7xl font-bold mb-2 w-fit flex items-center drop-shadow-lg">
           <CountUp from={0} to={stats.connections} separator="," />
         </h2>
-        <p className="text-gray-500 uppercase">Connections</p>
+        <p className="text-gray-500 uppercase">Active connections</p>
       </div>
       <div className="flex flex-col gap-2 place-items-center md:w-[10ch]">
         <h2 className="text-7xl font-bold mb-2 w-fit flex items-center drop-shadow-lg">
           <CountUp from={0} to={stats.clients} separator="," />
         </h2>
-        <p className="text-gray-500 uppercase">Online users</p>
+        <p className="text-gray-500 uppercase">Active clients</p>
       </div>
     </div>
   );

@@ -2,21 +2,29 @@
 
 import Image from "next/image";
 
+import { Scene } from "./model/scene";
+import { Suspense } from "react";
+import { Model } from "./model/model";
+
 export const Hero: React.FC = () => {
   return (
     <div className="mt-40 mb-30">
-      <div className="mt-10 mb-10 h-100 w-full flex flex-col place-self-center items-center justify-center md:flex-row">
-        <h1 className="lg:text-7xl font-bold w-full ml-[5%] drop-shadow-lg md:text-5xl text-4xl md:w-200 text-center md:text-left">
+      <div className="relative mt-10 mb-10 h-150 w-full grid md:lg:grid-cols-[1fr_600px] grid-cols-1 md:lg:px-0 px-6  items-center justify-start md:flex-row ">
+        <h1 className="lg:text-7xl font-bold w-full ml-[5%] drop-shadow-lg md:text-5xl text-4xl md:w-200 text-center md:text-left ">
           Ditch TeamViewer & AnyDesk — Welcome to the <i>new way</i> to remote
           desktop.
         </h1>
-        <Image
+        {/* <Image
           className="w-[40%] sm:w-[40%] lg:w-[600px] aspect-square"
           src="/icons/newlogo.png"
           width={600}
           height={600}
           alt="hero"
-        />
+        /> */}
+
+        {/* <Lights /> */}
+
+        <Model />
       </div>
 
       <div className="flex flex-col md:flex-row mx-15 md:mx-0 justify-center gap-4">

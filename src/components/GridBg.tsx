@@ -14,7 +14,7 @@ export function GridBackground({ children }: { children: React.ReactNode }) {
       />
       {/* Radial gradient for the container to give a faded look */}
       <div className="pointer-events-none absolute inset-0 flex items-center justify-center [mask-image:radial-gradient(ellipse_at_center,transparent_10%,black)] bg-[#1e1f22]"></div>
-      <div className="relative z-20 bg-gradient-to-b from-neutral-50 to-red-600 bg-clip-text py-8 text-4xl font-bold sm:text-7xl">
+      <div className="relative z-20 bg-gradient-to-b from-neutral-50 to-neutral-100 bg-clip-text py-8 text-4xl font-bold sm:text-7xl">
         {children}
       </div>
     </div>

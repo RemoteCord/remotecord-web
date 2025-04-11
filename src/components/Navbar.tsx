@@ -36,7 +36,7 @@ const items = [
 
 export const NavBar: React.FC = () => {
   return (
-    <div className=" h-fit py-2 w-full px-2" data-tauri-drag-region>
+    <div className=" h-20 fixed z-50  py-2 w-full px-2" data-tauri-drag-region>
       <div className="flex gap-2 justify-center items-center">
         {/* <Image src={"/icon.png"} width={30} height={30} alt="icon" /> */}
         {items.map((item) => (

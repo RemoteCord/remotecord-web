@@ -5,6 +5,7 @@ import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 import { useLoader, Canvas, useFrame } from "@react-three/fiber";
 import { Object3D, Mesh, MathUtils } from "three";
 import { Lights } from "./light";
+import useWindow from "@/hooks/useWindow";
 
 interface GLTFResult {
   nodes: {
@@ -17,7 +18,127 @@ interface GLTFResult {
 }
 
 const ModelContent = () => {
+  const { isDesktop } = useWindow();
   const groupRef = useRef<any>(null);
+  const [position, setPosition] = useState({
+    x: -3.5,
+    y: -3,
+    z: 0,
+  });
+
+  const [size, setSize] = useState(70);
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+
+  const [scrollProgress, setScrollProgress] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      const docHeight = document.body.scrollHeight - window.innerHeight;
+      const progress = docHeight > 0 ? scrollTop / docHeight : 0;
+      setScrollProgress(progress);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
+    console.log("isDesktop", isDesktop);
+    if (isDesktop) {
+      setPosition({
+        x: -3.5,
+        y: -3,
+        z: 0,
+      });
+      setSize(70);
+    } else {
+      setPosition({
+        x: -2.3,
+        y: -1.5,
+        z: 0,
+      });
+      setSize(45);
+    }
+  }, [isDesktop]);
+
+  useEffect(() => {
+    const handleMouseMove = (event: MouseEvent) => {
+      setMousePosition({ x: event.clientX, y: event.clientY });
+    };
+
+    window.addEventListener("mousemove", handleMouseMove);
+    return () => {
+      window.removeEventListener("mousemove", handleMouseMove);
+    };
+  }, []);
+
+  useFrame(({ clock }) => {
+    const elapsedTime = clock.getElapsedTime();
+
+    if (groupRef.current) {
+      if (isDesktop) {
+        const mouseX = (mousePosition.x / window.innerWidth) * 2 - 1;
+        const mouseY = (mousePosition.y / window.innerHeight) * 2 - 1;
+
+        const maxRotationAngle = 0.3;
+
+        const targetRotationY = mouseX * maxRotationAngle;
+        const targetRotationX = mouseY * maxRotationAngle;
+        const targetRotationZ = MathUtils.clamp(
+          mouseX * mouseY * 0.1,
+          -maxRotationAngle / 3,
+          maxRotationAngle / 3
+        );
+
+        // Z grows based on scroll
+        const minZ = 0;
+        const maxZ = 2; // how much it comes forward
+        const targetZ = minZ + maxZ * scrollProgress;
+
+        groupRef.current.rotation.y = MathUtils.lerp(
+          groupRef.current.rotation.y,
+          targetRotationY,
+          0.05
+        );
+        groupRef.current.rotation.x = MathUtils.lerp(
+          groupRef.current.rotation.x,
+          targetRotationX,
+          0.05
+        );
+        groupRef.current.rotation.z = MathUtils.lerp(
+          groupRef.current.rotation.z,
+          targetRotationZ,
+          0.03
+        );
+
+        groupRef.current.position.z = MathUtils.lerp(
+          groupRef.current.position.z,
+          targetZ,
+          0.05
+        );
+      } else {
+        // Mobile auto rotation animation
+        const autoRotationY = Math.sin(elapsedTime * 0.5) * 0.5; // slow & soft left-right
+        const autoRotationX = Math.cos(elapsedTime * 0.3) * 0.05; // subtle up-down
+
+        groupRef.current.rotation.y = MathUtils.lerp(
+          groupRef.current.rotation.y,
+          autoRotationY,
+          0.03
+        );
+        groupRef.current.rotation.x = MathUtils.lerp(
+          groupRef.current.rotation.x,
+          autoRotationX,
+          0.03
+        );
+      }
+    }
+  });
+
+  // Desktop -3.5 -3 0
+  // Mobile -3.5 -3 0
+
   const gltf = useLoader(
     GLTFLoader,
     "/model/logo.glb"
@@ -31,9 +152,9 @@ const ModelContent = () => {
         receiveShadow
         geometry={nodes.Curve.geometry}
         material={materials["SVGMat.001"]}
-        position={[-3.5, -3, 0]}
-        rotation={[Math.PI / 2.2, 0, 0.25]}
-        scale={70}
+        position={[position.x, position.y, position.z]}
+        rotation={[Math.PI / 2, 0, 0]}
+        scale={size}
       />
     </group>
   );

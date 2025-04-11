@@ -1,7 +1,10 @@
+"use client";
+import useWindow from "@/hooks/useWindow";
 import Image from "next/image";
 import Link from "next/link";
 
 export const Footer: React.FC = () => {
+  const { isDesktop } = useWindow();
   return (
     <footer className="footer sm:footer-horizontal bg-[#1213148a] text-neutral-content justify-items-center p-6 mt-[5%]">
       <aside className="grid-flow-col justify-items-center">
@@ -9,18 +12,20 @@ export const Footer: React.FC = () => {
           width={60}
           height={60}
           src={"/icons/newlogo.png"}
+          draggable={false}
           alt={"RemoteCord Logo"}
         />
-        <p className="m-5">
+        <p className="m-5 text-balance text-center ">
           Copyright © {new Date().getFullYear()} - All rights reserved
           <br />
-          Made with ❤️ by the{" "}
-          <a
-            className="border-b-neutral-300 border-b-2"
+          Made with ❤️ by the {!isDesktop && <br />}
+          <Link
+            target="_blank"
+            className="border-b-neutral-300 border-b-2 "
             href="https://github.com/RemoteCord"
           >
             RemoteCord Team
-          </a>
+          </Link>
           .
         </p>
       </aside>

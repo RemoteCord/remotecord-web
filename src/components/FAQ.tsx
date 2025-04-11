@@ -1,3 +1,5 @@
+import { Details } from "./ui/details";
+
 const items = [
   {
     title: "What is RemoteCord?",
@@ -52,33 +54,9 @@ export const FAQ: React.FC = () => {
             Questions you may have about our service.
           </p>
         </div>
-        <div className="mx-auto mt-8 grid divide-y divide-neutral-700 md:max-w-[50%]">
+        <div className="mx-auto mt-8 flex flex-col gap-4 md:max-w-[50%]">
           {items.map((item, index) => (
-            <div key={index} className="py-5">
-              <details className="group">
-                <summary className="flex cursor-pointer list-none items-center justify-between font-medium">
-                  <span>{item.title}</span>
-                  <span className="transition group-open:rotate-180">
-                    <svg
-                      fill="none"
-                      height="24"
-                      shapeRendering="geometricPrecision"
-                      stroke="currentColor"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="1.5"
-                      viewBox="0 0 24 24"
-                      width="24"
-                    >
-                      <path d="M6 9l6 6 6-6"></path>
-                    </svg>
-                  </span>
-                </summary>
-                <p className="group-open:animate-fadeIn mt-3 text-neutral-400 whitespace-pre-line">
-                  {item.answer}
-                </p>
-              </details>
-            </div>
+            <Details title={item.title} description={item.answer} key={index} />
           ))}
           {/* <div className="py-5">
             <details className="group">

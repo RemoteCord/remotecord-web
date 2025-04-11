@@ -5,14 +5,62 @@ import Image from "next/image";
 import { Scene } from "./model/scene";
 import { Suspense } from "react";
 import { Model } from "./model/model";
+import { Charm, Noto_Serif } from "next/font/google";
+import useWindow from "@/hooks/useWindow";
 
+const words = "Ditch TeamViewer & AnyDesk — Welcome to the".split(" ");
+const words2 = "to remote desktop.".split(" ");
+const font = Noto_Serif({
+  subsets: ["latin"],
+  variable: "--font-noto",
+  style: ["normal", "italic"], // Add italic style
+});
+
+import { motion } from "motion/react";
 export const Hero: React.FC = () => {
+  const { isDesktop } = useWindow();
   return (
-    <div className="mt-40 mb-30">
-      <div className="relative mt-10 mb-10 h-150 w-full grid md:lg:grid-cols-[1fr_600px] grid-cols-1 md:lg:px-0 px-6  items-center justify-start md:flex-row ">
-        <h1 className="lg:text-7xl font-bold w-full ml-[5%] drop-shadow-lg md:text-5xl text-4xl md:w-200 text-center md:text-left ">
-          Ditch TeamViewer & AnyDesk — Welcome to the <i>new way</i> to remote
-          desktop.
+    <div className="md:lg:pt-0 pt-45">
+      <div className="relative  h-150 w-full grid md:lg:grid-cols-[1fr_600px] grid-cols-1 md:lg:px-0 px-2 items-center justify-start md:flex-row ">
+        <h1 className="lg:text-7xl font-[700] w-full md:lg:ml-[5%] ml-0 drop-shadow-lg md:text-5xl text-4xl md:w-200 text-center md:text-left ">
+          <motion.span className="">
+            {words.map((word, index) => (
+              <motion.span
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{
+                  duration: 0.5,
+                  delay: 0.2 + index * 0.1,
+                }}
+                key={index}
+                className=""
+              >
+                {word} {index < words.length - 1 && <span> </span>}
+              </motion.span>
+            ))}
+          </motion.span>{" "}
+          <motion.span
+            initial={{ opacity: 1 }}
+            className={`${font.className} font-[400] italic`}
+          >
+            {!isDesktop && <br />}new way
+          </motion.span>{" "}
+          <motion.span className="">
+            {words2.map((word, index) => (
+              <motion.span
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{
+                  duration: 0.5,
+                  delay: 0.6 + index * 0.1,
+                }}
+                key={index}
+                className=""
+              >
+                {word} {index < words.length - 1 && <span> </span>}
+              </motion.span>
+            ))}
+          </motion.span>
         </h1>
         {/* <Image
           className="w-[40%] sm:w-[40%] lg:w-[600px] aspect-square"

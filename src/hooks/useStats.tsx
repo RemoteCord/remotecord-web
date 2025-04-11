@@ -16,7 +16,7 @@ export const useStats = () => {
   useEffect(() => {
     const fetchStats = async () => {
       console.log(API_URL);
-      const res = await fetch(`${API_URL}/api/public/stats`, {
+      const res = await fetch(`${API_URL}/public/stats`, {
         method: "GET",
       });
       const data = await res.json();

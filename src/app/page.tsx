@@ -21,13 +21,13 @@ export default function Home() {
       <Section
         title="We fixed remote access"
         description="Accessing your devices & transfering files has never been simpler. Securely and conveniently, from anywhere in the world."
-        image="/screenshots/app.webp"
+        image="/screenshots/app1.png"
       ></Section>
 
       <Section
         title="Built from the ground up with your security in mind"
         description="Never expose your home network to the internet again. Enjoy a blazingly fast & secure experience."
-        image="/screenshots/app.webp"
+        image="/screenshots/app2.png"
       ></Section>
 
       <CarouselComp

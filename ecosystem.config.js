@@ -1,3 +1,5 @@
+require("dotenv").config({ path: "./.env" });
+
 module.exports = {
   apps: [
     {
@@ -10,7 +12,8 @@ module.exports = {
 
       env_prod: {
         APP_ENV: "prod", // APP_ENV=prod
-        NEXT_PUBLIC_API_URL: "https://api2.luqueee.dev/api",
+        NEXT_PUBLIC_API_URL: process.env.NEXT_PUBLIC_API_URL,
+        NEXT_PUBLIC_POSTHOG_KEY: process.env.NEXT_PUBLIC_POSTHOG_KEY,
       },
     },
   ],

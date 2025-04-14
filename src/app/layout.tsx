@@ -3,6 +3,7 @@ import "./globals.css";
 
 import { NavBar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import { PostHogProvider } from "@/components/PostHogProvider";
 
 // Import Inter font
 import { Inter } from "next/font/google";
@@ -16,15 +17,15 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
     <html className="dark max-w-[100vw] overflow-x-hidden" lang="en">
       <body className={`${inter.className}  antialiased dark `}>
-        <NavBar />
-        {children}
-        <Footer />
+        <PostHogProvider>
+          <NavBar />
+          {children}
+          <Footer />
+        </PostHogProvider>
       </body>
     </html>
   );

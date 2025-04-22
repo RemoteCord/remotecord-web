@@ -17,12 +17,13 @@ const font = Noto_Serif({
 });
 
 import { motion } from "motion/react";
+import Link from "next/link";
 export const Hero: React.FC = () => {
   const { isDesktop } = useWindow();
   return (
     <div className="md:lg:pt-0 pt-45">
-      <div className="relative  h-150 w-full grid md:lg:grid-cols-[1fr_600px] grid-cols-1 md:lg:px-0 px-2 items-center justify-start md:flex-row ">
-        <h1 className="lg:text-7xl font-[700] w-full md:lg:ml-[5%] ml-0 drop-shadow-lg md:text-5xl text-4xl md:w-200 text-center md:text-left ">
+      <div className="relative  h-150 w-full grid md:lg:grid-cols-[1fr_500px] grid-cols-1 md:lg:px-0 px-2 items-center justify-start md:flex-row ">
+        <h1 className="lg:text-6xl xl:text-6xl font-[700] xl:sm:max-w-full lg:md:max-w-[550px] w-full  drop-shadow-lg md:text-5xl text-4xl md:w-200 text-center md:text-left ">
           <motion.span className="">
             {words.map((word, index) => (
               <motion.span
@@ -76,12 +77,13 @@ export const Hero: React.FC = () => {
       </div>
 
       <div className="flex flex-col md:flex-row mx-15 md:mx-0 justify-center gap-4">
-        <button
+        <Link
+          href={"/get-started"}
           type="button"
           className="py-5 px-18 text-base bg-indigo-500 text-white rounded-full cursor-pointer font-semibold text-center shadow-xs transition-all duration-500 hover:bg-indigo-700"
         >
           Get Started
-        </button>
+        </Link>
         <button
           type="button"
           className="py-5 px-8 text-base bg-indigo-50 text-indigo-500 rounded-full cursor-pointer font-semibold text-center shadow-xs transition-all duration-500 hover:bg-indigo-100"

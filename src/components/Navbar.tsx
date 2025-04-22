@@ -6,15 +6,20 @@ import Image from "next/image";
 // import { TitleBar } from "./TitleBar";
 import {
   IconHelpHexagonFilled,
-  IconBoltFilled,
+  IconHomeFilled,
   IconBrandGithubFilled,
   IconBrandDiscordFilled,
 } from "@tabler/icons-react";
 
 const items = [
   {
+    title: "Home",
+    url: "/",
+    icon: IconHomeFilled,
+  },
+  {
     title: "FAQ",
-    url: "#faq",
+    url: "/#faq",
     icon: IconHelpHexagonFilled,
   },
   // {
@@ -28,8 +33,8 @@ const items = [
     icon: IconBrandGithubFilled,
   },
   {
-    title: "Support",
-    url: "https://discord.com",
+    title: "Discord",
+    url: process.env.NEXT_PUBLIC_DISCORD_INVITE_URL as string,
     icon: IconBrandDiscordFilled,
   },
 ];
@@ -44,7 +49,7 @@ export const NavBar: React.FC = () => {
             key={item.title}
             href={item.url}
             target={item.url.startsWith("http") ? "_blank" : ""}
-            className="flex gap-2 hover:bg-zinc-900 transition-all duration-300 p-3 h-[50px] rounded-lg items-center justify-end"
+            className="flex gap-2 hover:bg-zinc-900 transition-all duration-300 p-3 h-fit rounded-lg items-center justify-end"
           >
             <item.icon size={20} />
             {item.title}

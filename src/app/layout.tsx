@@ -19,7 +19,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html className="dark max-w-[100vw] overflow-x-hidden" lang="en">
+    <html className="dark max-w-screen overflow-x-hidden" lang="en">
       <body className={`${inter.className}  antialiased dark `}>
         <PostHogProvider>
           <NavBar />

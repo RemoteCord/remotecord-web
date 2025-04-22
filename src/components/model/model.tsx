@@ -3,7 +3,7 @@
 import React, { Suspense, useEffect, useRef, useState } from "react";
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 import { useLoader, Canvas, useFrame } from "@react-three/fiber";
-import { Object3D, Mesh, MathUtils } from "three";
+import { type Object3D, type Mesh, MathUtils } from "three";
 import { Lights } from "./light";
 import useWindow from "@/hooks/useWindow";
 
@@ -13,7 +13,7 @@ interface GLTFResult {
     [key: string]: Object3D;
   };
   materials: {
-    [key: string]: any;
+    [key: string]: unknown;
   };
 }
 
@@ -151,7 +151,7 @@ const ModelContent = () => {
         castShadow
         receiveShadow
         geometry={nodes.Curve.geometry}
-        material={materials["SVGMat.001"]}
+        material={materials["SVGMat.001"] as any}
         position={[position.x, position.y, position.z]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={size}

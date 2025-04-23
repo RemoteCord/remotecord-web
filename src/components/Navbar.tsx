@@ -56,7 +56,7 @@ export const NavBar: React.FC = () => {
   const { isDesktop } = useWindow();
   return (
     <div className=" h-20 fixed z-50  py-2 w-full px-2" data-tauri-drag-region>
-      <div className="flex gap-2 justify-center items-center bg-[#1e1f22]/50 w-fit mx-auto py-1 rounded-lg backdrop-blur-[1px]">
+      <div className="flex md:lg:gap-8 gap-4 justify-center items-center bg-[#1e1f22]/50 md:lg:w-fit w-full md:lg:px-2 px-0 mx-auto py-1 rounded-lg backdrop-blur-[1px]">
         {/* <Image src={"/icon.png"} width={30} height={30} alt="icon" /> */}
         {items.map((item) => (
           <Link
@@ -64,7 +64,7 @@ export const NavBar: React.FC = () => {
             href={item.url}
             target={item.url.startsWith("http") ? "_blank" : ""}
             className={cn(
-              "flex gap-2 hover:bg-zinc-900 transition-all duration-300 px-3 py-1 h-fit rounded-lg items-center justify-end md:lg:text-base text-sm",
+              "flex gap-2 hover:bg-zinc-900 transition-all duration-300 py-1 h-fit rounded-lg items-center justify-end md:lg:text-base text-xs",
               !isDesktop && !item.mobile ? "hidden" : "flex"
             )}
           >

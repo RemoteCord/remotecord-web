@@ -20,7 +20,7 @@ export default function GetStarted() {
           <span className="font-[600]">Control a client</span>
         </Link>
         <Link
-          href={""}
+          href={"https://download.remotecord.app/windows-x86_64"}
           className="bg-white hover:bg-gray-300 transition-all duration-300 text-black w-55 justify-center flex  px-4 py-2 rounded-lg items-center gap-4"
         >
           <span>

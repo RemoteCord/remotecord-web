@@ -6,9 +6,8 @@ body {
   background-color: #1e1f22;
 }
 
-
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 @custom-variant dark (&:is(.dark *));
 
@@ -56,7 +55,7 @@ html {
   --background: oklch(1 0 0);
   --foreground: oklch(0.039 0 0);
   --card: oklch(1 0 0);
-  --card-foreground: transparent
+  --card-foreground: transparent;
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.039 0 0);
   --primary: oklch(0.06 0.03 0);
@@ -132,5 +131,3 @@ html {
     @apply bg-background text-foreground;
   }
 }
-
-

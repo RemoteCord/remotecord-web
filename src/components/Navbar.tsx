@@ -64,7 +64,7 @@ export const NavBar: React.FC = () => {
             href={item.url}
             target={item.url.startsWith("http") ? "_blank" : ""}
             className={cn(
-              "flex gap-2 hover:bg-zinc-900 transition-all duration-300 py-1 h-fit rounded-lg items-center justify-end md:lg:text-base text-xs",
+              "flex gap-2 hover:bg-zinc-900 transition-all duration-300 p-1 h-fit rounded-lg items-center justify-end md:lg:text-base text-xs",
               !isDesktop && !item.mobile ? "hidden" : "flex"
             )}
           >

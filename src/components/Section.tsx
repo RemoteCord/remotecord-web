@@ -10,7 +10,7 @@ export const Section: React.FC<{
 
   width?: number;
   height?: number;
-}> = ({ title, description, id, image, width = 1100, height = 1100 }) => {
+}> = ({ title, description, id, image, width = 1000, height = 600 }) => {
   return (
     <div>
       <div
@@ -28,6 +28,8 @@ export const Section: React.FC<{
           alt="App screenshot"
           width={width}
           height={height}
+          draggable="false"
+          loading="lazy"
           className="aspect-auto mx-auto h-auto rounded-2xl drop-shadow-2xl border-2 border-[#00000011] transition-transform duration-300 hover:scale-105"
         />
       </div>

@@ -11,5 +11,5 @@ export default async function Redirect(id: string) {
     // Handle errors
   }
 
-  redirect(NEXT_PUBLIC_DISCORD_INVITE_URL!); // Navigate to the new post page
+  redirect(NEXT_PUBLIC_DISCORD_INVITE_URL as string); // Navigate to the new post page
 }

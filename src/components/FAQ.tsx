@@ -17,14 +17,8 @@ const items = [
       "Yes. Using our friend system, you can add multiple users and allow them different levels of access to your client (eg. User1 has full control, User2 can only download files). You can also remove users & their permissions at any time.",
   },
   {
-    title: "How do I install RemoteCord?",
-    answer: `To install RemoteCord, follow these steps:\n\n
-        1. Join our Discord server: This allows the bot to send you direct messages.\n
-        2. Activate your Discord account: Locate the RemoteCord bot and send it the \`/activate\` command via direct message.\n
-        3. Download and install the RemoteCord Client App: Log in to the app using your Google Account.\n
-        4. Find your Client ID: In the app, locate your unique Client ID. Use the command \`/add <client_id>\` in Discord to friend your client. (Ensure you accept the friend request on the client.)\n
-        5. Connect to your client: Run the command \`/connect\` in Discord and select the client you just added.\n
-        6. You're all set!: You can now use RemoteCord to access your devices and transfer files seamlessly.`,
+    title: "How to install RemoteCord?",
+    answer: `To install RemoteCord, you can follow the steps in <a>our documentation</a>. The process is simple and straightforward.\n`,
   },
   {
     title: "Is RemoteCord secure?",

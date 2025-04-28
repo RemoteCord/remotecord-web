@@ -10,6 +10,7 @@ import {
   IconBrandGithubFilled,
   IconBrandDiscordFilled,
   IconFileDownloadFilled,
+  IconBoltFilled,
 } from "@tabler/icons-react";
 import useWindow from "@/hooks/useWindow";
 import { cn } from "@/lib/utils";
@@ -19,6 +20,12 @@ const items = [
     title: "Home",
     url: "/",
     icon: IconHomeFilled,
+    mobile: true,
+  },
+  {
+    title: "Docs",
+    url: "https://docs.remotecord.app",
+    icon: IconBoltFilled,
     mobile: true,
   },
   {
@@ -33,23 +40,18 @@ const items = [
     icon: IconFileDownloadFilled,
     mobile: true,
   },
-  // {
-  //   title: "Get Started",
-  //   url: "#get-started",
-  //   icon: IconBoltFilled,
-  // },
   {
     title: "GitHub",
     url: "https://github.com/RemoteCord",
     icon: IconBrandGithubFilled,
     mobile: false,
   },
-  {
-    title: "Discord",
-    url: process.env.NEXT_PUBLIC_DISCORD_INVITE_URL as string,
-    icon: IconBrandDiscordFilled,
-    mobile: true,
-  },
+  // {
+  //   title: "Support",
+  //   url: process.env.NEXT_PUBLIC_DISCORD_INVITE_URL as string,
+  //   icon: IconBrandDiscordFilled,
+  //   mobile: false,
+  // },
 ];
 
 export const NavBar: React.FC = () => {

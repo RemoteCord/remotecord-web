@@ -22,9 +22,9 @@ export const metadata: Metadata = {
     siteName: "Remotecord",
     images: [
       {
-        url: "https://remotecord.app/icons/newlogo.png",
-        width: 1200,
-        height: 630,
+        url: "https://remotecord.app/assets/Banner.png",
+        width: 1000,
+        height: 400,
         alt: "Remotecord Logo – Remote Device Access via Discord",
       },
     ],
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     title: "Remotecord – Remote Control Your PC from Discord",
     description:
       "Remotecord gives you secure, remote access to your devices from Discord. Monitor and manage everything effortlessly.",
-    images: ["https://remotecord.app/icons/newlogo.png"],
+    images: ["https://remotecord.app/assets/Banner.png"],
   },
   robots: {
     index: true,

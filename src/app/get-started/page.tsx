@@ -7,7 +7,15 @@ export default function GetStarted() {
     <div className="flex flex-col items-center justify-center h-screen">
       <h1 className="text-4xl font-bold">Get Started</h1>
       <p className="mt-4 text-lg text-center">
-        Follow the instructions to get started with our application.
+        Follow{" "}
+        <Link
+          href={"https://docs.remotecord.app/docs/getting-started/installation"}
+          target="_blank"
+          className="border-b-neutral-300 border-b-2 "
+        >
+          the guide
+        </Link>{" "}
+        to get started with our application.
       </p>
       <div className="flex md:lg:flex-row flex-col gap-4 mt-8">
         <Link

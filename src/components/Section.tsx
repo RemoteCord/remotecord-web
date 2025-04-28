@@ -23,11 +23,12 @@ export const Section: React.FC<{
         <p className="mx-auto mb-7 text-gray-400 text-lg md:w-[80%] w-fit">
           {description}
         </p>
-        <Image
+        <img
           src={image}
           alt="App screenshot"
           width={width}
           height={height}
+          sizes="(max-width: 768px) 100vw, 700px"
           draggable="false"
           loading="lazy"
           className="aspect-auto mx-auto h-auto rounded-2xl drop-shadow-2xl border-2 border-[#00000011] transition-transform duration-300 hover:scale-105"

@@ -4,7 +4,7 @@ import { motion } from "motion/react";
 import { useEffect, useRef, useState } from "react";
 export const Details: React.FC<{
   title: string;
-  description: string;
+  description: string | React.ReactNode;
 }> = ({ title, description, ...props }) => {
   const [isOpen, setIsOpen] = useState(false);
 

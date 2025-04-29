@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Details } from "./ui/details";
 
 const items = [
@@ -18,8 +19,19 @@ const items = [
   },
   {
     title: "How to install RemoteCord?",
-    answer:
-      "To install RemoteCord, you can follow the steps in <a>our documentation</a>. The process is simple and straightforward.\n",
+    answer: (
+      <>
+        To install RemoteCord, you can follow the steps in{" "}
+        <Link
+          href="https://docs.remotecord.app/docs/getting-started/installation"
+          target="_blank"
+          className="border-b-neutral-500 border-b-2 "
+        >
+          our documentation
+        </Link>
+        . The process is simple and straightforward.
+      </>
+    ),
   },
   {
     title: "Is RemoteCord secure?",

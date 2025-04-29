@@ -1,6 +1,11 @@
 import Link from "next/link";
 import * as React from "react";
 import { WindowsLogo, DiscordLogo } from "@/components/Icons";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Get Started",
+};
 
 export default function GetStarted() {
   return (
@@ -11,7 +16,8 @@ export default function GetStarted() {
       </p>
       <div className="flex md:lg:flex-row flex-col gap-4 mt-8">
         <Link
-          href={process.env.NEXT_PUBLIC_DISCORD_INVITE_URL as string}
+          target="_blank"
+          href={"/discord"}
           className="bg-white hover:bg-gray-300 transition-all duration-300 w-55 justify-center text-black flex  px-4 py-2 rounded-lg items-center gap-4"
         >
           <span>
@@ -20,6 +26,7 @@ export default function GetStarted() {
           <span className="font-[600]">Control a client</span>
         </Link>
         <Link
+          target="_blank"
           href={"https://download.remotecord.app/windows-x86_64"}
           className="bg-white hover:bg-gray-300 transition-all duration-300 text-black w-55 justify-center flex  px-4 py-2 rounded-lg items-center gap-4"
         >

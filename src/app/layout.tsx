@@ -10,7 +10,10 @@ import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Remotecord – The new way to remote desktop",
+  title: {
+    default: "Remotecord – Remote Device Access Through Discord",
+    template: "%s | Remotecord – The new way to remote desktop",
+  },
   description:
     "Remotecord lets you remotely access, monitor, and manage your devices straight from Discord. No complex setup. Download files, view system stats, and more—all in one place.",
   metadataBase: new URL(process.env.APP_BASE_URL ?? "https://remotecord.app"),

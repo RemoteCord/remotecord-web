@@ -121,6 +121,7 @@ function Carousel({
       <div
         onKeyDownCapture={handleKeyDown}
         className={cn("relative", className)}
+        // biome-ignore lint/a11y/useSemanticElements: <explanation>
         role="region"
         aria-roledescription="carousel"
         data-slot="carousel"
@@ -185,7 +186,7 @@ function CarouselPrevious({
       variant={variant}
       size={size}
       className={cn(
-        "absolute size-11 rounded-full",
+        "absolute size-11 rounded-full hover:cursor-pointer",
         orientation === "horizontal"
           ? "top-1/2 -left-1 -translate-y-1/2 md:-left-12"
           : "-top-12 left-1/2 -translate-x-1/2 rotate-90",
@@ -215,7 +216,7 @@ function CarouselNext({
       variant={variant}
       size={size}
       className={cn(
-        "absolute size-11 rounded-full",
+        "absolute size-11 rounded-full  hover:cursor-pointer",
         orientation === "horizontal"
           ? "top-1/2 -right-1 -translate-y-1/2 md:-right-12"
           : "-bottom-12 left-1/2 -translate-x-1/2 rotate-90",

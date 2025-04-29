@@ -6,11 +6,17 @@ const API_URL = process.env.NEXT_PUBLIC_API_URL;
 
 export const useStats = () => {
   const [stats, setStats] = useState<{
-    connections: number;
-    clients: number;
+    commands: number;
+    users: {
+      controllers: number;
+      clients: number;
+    };
   }>({
-    connections: 0,
-    clients: 0,
+    commands: 0,
+    users: {
+      controllers: 0,
+      clients: 0,
+    },
   });
 
   useEffect(() => {
@@ -21,10 +27,7 @@ export const useStats = () => {
       });
       const data = await res.json();
       console.log(data);
-      setStats({
-        connections: Number(data.connections),
-        clients: Number(data.clients),
-      });
+      setStats(data);
     };
     fetchStats();
   }, []);

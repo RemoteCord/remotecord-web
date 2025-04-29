@@ -41,7 +41,7 @@ const items = [
     mobile: true,
   },
   {
-    title: "GitHub",
+    title: "Contribute",
     url: "https://github.com/RemoteCord",
     icon: IconBrandGithubFilled,
     mobile: false,

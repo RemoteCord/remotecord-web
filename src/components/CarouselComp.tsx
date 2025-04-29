@@ -1,6 +1,6 @@
 "use client";
 
-import * as React from "react";
+import type * as React from "react";
 
 import Image from "next/image";
 
@@ -43,6 +43,7 @@ export const CarouselComp: React.FC<{
               <Card className="items-center justify-center p-6">
                 <CardContent className="">
                   <Image
+                    draggable={false}
                     src={image}
                     alt={`Carousel item ${index + 1}`}
                     className="object-cover w-fit h-fit rounded-2xl drop-shadow-2xl"

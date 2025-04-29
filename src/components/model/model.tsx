@@ -47,11 +47,11 @@ const ModelContent = () => {
     console.log("isDesktop", isDesktop);
     if (isDesktop) {
       setPosition({
-        x: -3.5,
+        x: -3.2,
         y: -3,
         z: 0,
       });
-      setSize(70);
+      setSize(65);
     } else {
       setPosition({
         x: -2.3,
@@ -94,8 +94,8 @@ const ModelContent = () => {
         // Z grows based on scroll
         const minZ = 0;
         const maxZ = 2; // how much it comes forward
-        const targetZ = minZ + maxZ * scrollProgress;
-
+        // const targetZ = minZ + maxZ * scrollProgress;
+        const targetZ = 0;
         groupRef.current.rotation.y = MathUtils.lerp(
           groupRef.current.rotation.y,
           targetRotationY,

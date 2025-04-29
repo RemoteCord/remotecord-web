@@ -18,7 +18,8 @@ const items = [
   },
   {
     title: "How to install RemoteCord?",
-    answer: `To install RemoteCord, you can follow the steps in <a>our documentation</a>. The process is simple and straightforward.\n`,
+    answer:
+      "To install RemoteCord, you can follow the steps in <a>our documentation</a>. The process is simple and straightforward.\n",
   },
   {
     title: "Is RemoteCord secure?",

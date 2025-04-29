@@ -11,21 +11,10 @@ export const Details: React.FC<{
   const descriptionRef = useRef<HTMLParagraphElement>(null);
   const [openHeight, setOpenHeight] = useState(0);
 
-  useEffect(() => {
-    if (isOpen && descriptionRef.current) {
-      const height = descriptionRef.current.scrollHeight;
-      setOpenHeight(height + 40); // Add some padding
-    }
-  }, [isOpen, description]);
-
   return (
     <div {...props} className="">
-      <motion.details
-        initial={{ height: 0 }}
-        animate={isOpen ? { height: openHeight } : { height: 45 }}
-        transition={{ duration: 0.5 }}
-        className="group overflow-hidden"
-      >
+      <motion.details className="group overflow-hidden">
+        {/* biome-ignore lint/a11y/useKeyWithClickEvents: <explanation> */}
         <summary
           onClick={() => setIsOpen(!isOpen)}
           className="flex cursor-pointer list-none items-center justify-between font-medium border-b pb-2 border-neutral-700 "
@@ -36,6 +25,7 @@ export const Details: React.FC<{
               !isOpen && "group-hover:rotate-90"
             } group-open:rotate-180`}
           >
+            {/* biome-ignore lint/a11y/noSvgWithoutTitle: <explanation> */}
             <svg
               fill="none"
               height="24"
@@ -47,6 +37,7 @@ export const Details: React.FC<{
               viewBox="0 0 24 24"
               width="24"
             >
+              {/* biome-ignore lint/style/useSelfClosingElements: <explanation> */}
               <path d="M6 9l6 6 6-6"></path>
             </svg>
           </span>

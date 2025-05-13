@@ -14,6 +14,8 @@ module.exports = {
         APP_ENV: "prod", // APP_ENV=prod
         NEXT_PUBLIC_API_URL: process.env.NEXT_PUBLIC_API_URL,
         NEXT_PUBLIC_POSTHOG_KEY: process.env.NEXT_PUBLIC_POSTHOG_KEY,
+        NEXT_PUBLIC_DISCORD_INVITE_URL:
+          process.env.NEXT_PUBLIC_DISCORD_INVITE_URL,
       },
     },
   ],

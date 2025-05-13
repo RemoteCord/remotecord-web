@@ -80,13 +80,13 @@ export const Hero: React.FC = () => {
         <Link
           href={"/get-started"}
           type="button"
-          className="py-5 px-18 text-base bg-indigo-500 text-white rounded-full cursor-pointer font-semibold text-center shadow-xs transition-all duration-500 hover:bg-indigo-700"
+          className="py-5 z-10 px-18 text-base bg-indigo-500 text-white rounded-full cursor-pointer font-semibold text-center shadow-xs transition-all duration-500 hover:bg-indigo-700"
         >
           Get Started
         </Link>
         <Link
           href={"/discord"}
-          className="py-5 px-8 text-base bg-indigo-50 text-indigo-500 rounded-full cursor-pointer font-semibold text-center shadow-xs transition-all duration-500 hover:bg-indigo-100"
+          className="py-5 px-8 z-10 text-base bg-indigo-50 text-indigo-500 rounded-full cursor-pointer font-semibold text-center shadow-xs transition-all duration-500 hover:bg-indigo-100"
         >
           Support
         </Link>

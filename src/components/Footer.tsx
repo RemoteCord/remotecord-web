@@ -7,7 +7,7 @@ export const Footer: React.FC = () => {
   const { isDesktop } = useWindow();
   return (
     <footer className="footer sm:footer-horizontal bg-[#1213148a] text-neutral-content justify-items-center p-6 mt-[5%]">
-      <aside className="grid-flow-col justify-items-center">
+      <aside className="flex flex-col items-center">
         <Image
           width={60}
           height={60}
@@ -29,7 +29,7 @@ export const Footer: React.FC = () => {
           .
         </p>
       </aside>
-      <nav className="flex gap-4 items-center md:place-self-center">
+      <nav className="flex gap-4 items-center justify-center">
         <Link
           href={"https://discord.com/"}
           target="_blank"

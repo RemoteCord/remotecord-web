@@ -25,7 +25,7 @@ export const CarouselComp: React.FC<{
   return (
     <Carousel
       id={id}
-      className="place-self-center text-center mt-20 md:lg:w-[40%] h-[30%] w-[80%]"
+      className="place-self-center mx-auto text-center mt-20 md:lg:w-[40%] h-[30%] w-[80%]"
     >
       <h2 className="text-4xl md:text-5xl font-bold mb-2 drop-shadow-lg">
         {title}

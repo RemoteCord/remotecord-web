@@ -35,7 +35,7 @@ export default function GetStarted() {
         </Link>
         <Link
           target="_blank"
-          href={"https://download.remotecord.app/windows-x86_64"}
+          href={"/download/windows"}
           className="bg-white hover:bg-gray-300 transition-all duration-300 text-black w-55 justify-center flex  px-4 py-2 rounded-lg items-center gap-4"
         >
           <span>

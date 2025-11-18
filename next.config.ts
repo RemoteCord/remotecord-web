@@ -32,6 +32,11 @@ const nextConfig: NextConfig = {
         destination: NEXT_PUBLIC_DISCORD_INVITE_URL as string,
         permanent: true,
       },
+      {
+        source: '/download/windows',
+        destination: 'https://github.com/RemoteCord/remotecord-app/releases/latest/download/RemoteCord_0.1.0_x64-setup.exe',
+        permanent: true,
+      }
 
     ]
   },
